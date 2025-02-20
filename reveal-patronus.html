@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patronus Reveal</title>
+  <link rel="stylesheet" href="puckett-style.css"> <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="reveal-patronus.css"> <!-- Link to the new CSS file -->
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Discover Your Patronus</h1>
+    <button id="revealPatronus" class="reveal-btn" onclick="revealPatronus()">Cast the Spell</button>
+
+    <div id="patronusEffect" class="hidden">
+      <div class="wisps"></div> <!-- Magical floating effect -->
+      <img id="patronusImage" src="" alt="Patronus">
+      <h2 id="patronusName"></h2>
+      <p id="patronusDescription"></p> <!-- Add a description element -->
+    </div>
+  </div>
+
+  <audio id="patronusSound" src="magic-sound.mp3"></audio> <!-- Add a magical sound effect -->
+
+  <script src="reveal-patronus.js"></script> <!-- Link to the new JavaScript file -->
+</body>
+</html>

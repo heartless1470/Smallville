@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Personalized Hogwarts Letter</title>
+  <link rel="stylesheet" href="puckett-style.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+  <div class="container">
+    <h1 class="header">Get Your Personalized Hogwarts Letter</h1>
+    <div class="form-content">
+      <form id="letterForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <button type="submit" class="feature-btn">Generate Letter</button>
+      </form>
+    </div>
+    <div id="letterContent" class="letter-content" style="display:none;">
+      <h2>Congratulations, <span id="studentName" onclick="location.href='secret2.html'" style="cursor:pointer;"></span>!</h2>
+      <p>📜 Hogwarts School of Witchcraft and Wizardry</p>
+      <p>Headmaster: Minerva McGonagall</p>
+      <p>(Order of Merlin, First Class, Grand Sorc., Chf. Warlock, Supreme Mugwump, International Confed. of Wizards)</p>
+      <p>Dear <span id="studentName2" onclick="location.href='secret2.html'" style="cursor:pointer;"></span>,</p>
+      <p>We are pleased to inform you that you have been accepted at Hogwarts School of Witchcraft and Wizardry for the upcoming school year. Please find enclosed a list of necessary books and equipment. Term begins on 1st September. We await your owl no later than 31st July confirming your attendance.</p>
+      <p>As you may know, Hogwarts is the premier institution for young witches and wizards, fostering excellence in magical education, the highest standard of spellwork, and lifelong bonds with fellow students. Your acceptance into this esteemed academy is not only a recognition of your abilities but a sign that you are destined for great things in the magical world.</p>
+      <p>Upon arrival at Hogwarts, you will be sorted into one of four houses—Gryffindor, Hufflepuff, Ravenclaw, or Slytherin—each embodying distinct qualities and values. Your housemates will become your second family, standing by your side as you navigate classes, Quidditch matches, and perhaps even a few secret passageways hidden within the castle walls.</p>
+      <p>Your wand will be a powerful companion, as every witch and wizard’s is uniquely suited to their personality and magical abilities. It is essential that you visit Ollivanders in Diagon Alley at your earliest convenience to obtain a wand that will complement your magical essence.</p>
+      <p>Additionally, you will be introduced to subjects such as:</p>
+      <ul>
+        <li>🪄 Transfiguration with Professor McGonagall – where objects shift and transform in astonishing ways.</li>
+        <li>🔮 Divination with Professor Trelawney – if the Inner Eye graces you with its presence.</li>
+        <li>🔬 Potions with Professor Snape – precision and patience are key (mind the exploding cauldrons!).</li>
+        <li>📜 Defense Against the Dark Arts – vital for any aspiring witch or wizard to master.</li>
+        <li>🦉 Care of Magical Creatures – if you have a fondness for Hippogriffs, Nifflers, and perhaps even a baby dragon.</li>
+      </ul>
+      <p>As a student at Hogwarts, you will also have access to the enchanted Great Hall, where the ceiling reflects the night sky, the warm glow of floating candles illuminates every feast, and the house elves of the kitchen prepare the most delicious treacle tarts and pumpkin pasties.</p>
+      <p>Please ensure that you are at Platform 9¾ at King’s Cross Station by 11:00 AM on September 1st to board the Hogwarts Express.</p>
+      <p>We eagerly anticipate your arrival at the castle and look forward to watching your magical talents flourish. Should you have any questions, do not hesitate to send an owl to the Hogwarts Admissions Office.</p>
+      <p>Yours sincerely,</p>
+      <p>Professor Minerva McGonagall</p>
+      <p>Deputy Headmistress</p>
+      <p>🏰 Hogwarts School of Witchcraft and Wizardry</p>
+      <button class="feature-btn" onclick="location.href='puckett.html'">Back to Magical Section</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('letterForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+
+      document.getElementById('studentName').innerText = name;
+      document.getElementById('studentName2').innerText = name;
+      document.getElementById('letterForm').style.display = 'none';
+      document.getElementById('letterContent').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

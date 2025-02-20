@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puckett's Magical Section</title>
+  <link rel="stylesheet" href="puckett-style.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+  <div class="container">
+    <h1 class="header">Welcome to Puckett's Magical Section!</h1>
+    <div class="intro">
+      <p class="description">This is where your magical journey begins, Puckett. Explore your personalized features below:</p>
+    </div>
+
+    <!-- Features -->
+    <div class="features">
+      <button class="feature-btn" id="houseSortingBtn" onclick="location.href='house-sorting-quiz.html'">Take the House Sorting Quiz</button>
+      <button class="feature-btn" id="wandGeneratorBtn" onclick="location.href='wand.html'">Generate Your Custom Wand</button>
+      <button class="feature-btn" id="patronusBtn" onclick="location.href='reveal-patronus.html'">Reveal Your Patronus</button>
+      <button class="feature-btn" id="hogwartsLetterBtn" onclick="location.href='hogwarts-letter.html'">Get Your Personalized Hogwarts Letter</button>
+      <button class="feature-btn" id="backToLoginBtn" onclick="location.href='index.html'">Back to Login</button>
+    </div>
+
+    <div id="wandDisplay" class="wand-display"></div>
+    <button id="lockInBtn" class="feature-btn" style="display:none;" onclick="lockInWand()">Lock In</button>
+
+    <div class="easter-eggs">
+      <p>✨ Hidden Magical Easter Eggs Await! Keep an eye out for surprises! ✨</p>
+    </div>
+  </div>
+
+  <script src="wand.js"></script> <!-- Link to the external JavaScript file -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const wandInfo = localStorage.getItem('lockedWand');
+        if (wandInfo) {
+            const wandDisplay = document.getElementById('wandDisplay');
+            wandDisplay.innerText = wandInfo;
+            wandDisplay.style.cursor = 'pointer';
+            wandDisplay.onclick = () => location.href = 'secret.html';
+        }
+    });
+  </script>
+</body>
+</html>
+

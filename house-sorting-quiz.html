@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House Sorting Quiz</title>
+  <link rel="stylesheet" href="puckett-style.css"> <!-- Reuse the existing CSS file -->
+</head>
+<body>
+  <div class="container">
+    <h1 class="header">House Sorting Quiz</h1>
+    <form id="sortingQuizForm">
+      <div class="question">
+        <p>Question 1: What trait do you value most?</p>
+        <label><input type="radio" name="q1" value="Gryffindor"> Bravery</label><br>
+        <label><input type="radio" name="q1" value="Hufflepuff"> Loyalty</label><br>
+        <label><input type="radio" name="q1" value="Ravenclaw"> Intelligence</label><br>
+        <label><input type="radio" name="q1" value="Slytherin"> Ambition</label>
+      </div>
+      <div class="question">
+        <p>Question 2: Which animal do you feel most connected to?</p>
+        <label><input type="radio" name="q2" value="Gryffindor"> Lion</label><br>
+        <label><input type="radio" name="q2" value="Hufflepuff"> Badger</label><br>
+        <label><input type="radio" name="q2" value="Ravenclaw"> Eagle</label><br>
+        <label><input type="radio" name="q2" value="Slytherin"> Snake</label>
+      </div>
+      <div class="question">
+        <p>Question 3: What is your favorite color?</p>
+        <label><input type="radio" name="q3" value="Gryffindor"> Red</label><br>
+        <label><input type="radio" name="q3" value="Hufflepuff"> Yellow</label><br>
+        <label><input type="radio" name="q3" value="Ravenclaw"> Blue</label><br>
+        <label><input type="radio" name="q3" value="Slytherin"> Green</label>
+      </div>
+      <div class="question">
+        <p>Question 4: Which subject do you excel in?</p>
+        <label><input type="radio" name="q4" value="Gryffindor"> Defense Against the Dark Arts</label><br>
+        <label><input type="radio" name="q4" value="Hufflepuff"> Herbology</label><br>
+        <label><input type="radio" name="q4" value="Ravenclaw"> Charms</label><br>
+        <label><input type="radio" name="q4" value="Slytherin"> Potions</label>
+      </div>
+      <div class="question">
+        <p>Question 5: What is your favorite magical item?</p>
+        <label><input type="radio" name="q5" value="Gryffindor"> Invisibility Cloak</label><br>
+        <label><input type="radio" name="q5" value="Hufflepuff"> Time-Turner</label><br>
+        <label><input type="radio" name="q5" value="Ravenclaw"> Pensieve</label><br>
+        <label><input type="radio" name="q5" value="Slytherin"> Horcrux</label>
+      </div>
+      <div class="question">
+        <p>Question 6: Which magical creature do you find most fascinating?</p>
+        <label><input type="radio" name="q6" value="Gryffindor"> Hippogriff</label><br>
+        <label><input type="radio" name="q6" value="Hufflepuff"> Niffler</label><br>
+        <label><input type="radio" name="q6" value="Ravenclaw"> Phoenix</label><br>
+        <label><input type="radio" name="q6" value="Slytherin"> Basilisk</label>
+      </div>
+      <div class="question">
+        <p>Question 7: What is your favorite magical spell?</p>
+        <label><input type="radio" name="q7" value="Gryffindor"> Expelliarmus</label><br>
+        <label><input type="radio" name="q7" value="Hufflepuff"> Lumos</label><br>
+        <label><input type="radio" name="q7" value="Ravenclaw"> Wingardium Leviosa</label><br>
+        <label><input type="radio" name="q7" value="Slytherin"> Avada Kedavra</label>
+      </div>
+      <div class="question">
+        <p>Question 8: What is your favorite magical location?</p>
+        <label><input type="radio" name="q8" value="Gryffindor"> The Forbidden Forest</label><br>
+        <label><input type="radio" name="q8" value="Hufflepuff"> The Burrow</label><br>
+        <label><input type="radio" name="q8" value="Ravenclaw"> The Library</label><br>
+        <label><input type="radio" name="q8" value="Slytherin"> The Chamber of Secrets</label>
+      </div>
+      <div class="question">
+        <p>Question 9: What is your favorite magical drink?</p>
+        <label><input type="radio" name="q9" value="Gryffindor"> Butterbeer</label><br>
+        <label><input type="radio" name="q9" value="Hufflepuff"> Pumpkin Juice</label><br>
+        <label><input type="radio" name="q9" value="Ravenclaw"> Gillywater</label><br>
+        <label><input type="radio" name="q9" value="Slytherin"> Firewhisky</label>
+      </div>
+      <div class="question">
+        <p>Question 10: What is your favorite magical candy?</p>
+        <label><input type="radio" name="q10" value="Gryffindor"> Chocolate Frogs</label><br>
+        <label><input type="radio" name="q10" value="Hufflepuff"> Bertie Bott's Every Flavor Beans</label><br>
+        <label><input type="radio" name="q10" value="Ravenclaw"> Fizzing Whizzbees</label><br>
+        <label><input type="radio" name="q10" value="Slytherin"> Acid Pops</label>
+      </div>
+      <div class="question">
+        <p>Question 11: What is your favorite magical sport?</p>
+        <label><input type="radio" name="q11" value="Gryffindor"> Quidditch</label><br>
+        <label><input type="radio" name="q11" value="Hufflepuff"> Gobstones</label><br>
+        <label><input type="radio" name="q11" value="Ravenclaw"> Wizard's Chess</label><br>
+        <label><input type="radio" name="q11" value="Slytherin"> Duelling</label>
+      </div>
+      <div class="question">
+        <p>Question 12: What is your favorite magical book?</p>
+        <label><input type="radio" name="q12" value="Gryffindor"> The Tales of Beedle the Bard</label><br>
+        <label><input type="radio" name="q12" value="Hufflepuff"> Fantastic Beasts and Where to Find Them</label><br>
+        <label><input type="radio" name="q12" value="Ravenclaw"> Hogwarts: A History</label><br>
+        <label><input type="radio" name="q12" value="Slytherin"> The Dark Arts Outsmarted</label>
+      </div>
+      <div class="question">
+        <p>Question 13: What is your favorite magical plant?</p>
+        <label><input type="radio" name="q13" value="Gryffindor"> Mandrake</label><br>
+        <label><input type="radio" name="q13" value="Hufflepuff"> Gillyweed</label><br>
+        <label><input type="radio" name="q13" value="Ravenclaw"> Devil's Snare</label><br>
+        <label><input type="radio" name="q13" value="Slytherin"> Venomous Tentacula</label>
+      </div>
+      <div class="question">
+        <p>Question 14: What is your favorite magical potion?</p>
+        <label><input type="radio" name="q14" value="Gryffindor"> Felix Felicis</label><br>
+        <label><input type="radio" name="q14" value="Hufflepuff"> Polyjuice Potion</label><br>
+        <label><input type="radio" name="q14" value="Ravenclaw"> Amortentia</label><br>
+        <label><input type="radio" name="q14" value="Slytherin"> Veritaserum</label>
+      </div>
+      <div class="question">
+        <p>Question 15: What is your favorite magical artifact?</p>
+        <label><input type="radio" name="q15" value="Gryffindor"> The Sword of Gryffindor</label><br>
+        <label><input type="radio" name="q15" value="Hufflepuff"> Helga Hufflepuff's Cup</label><br>
+        <label><input type="radio" name="q15" value="Ravenclaw"> Rowena Ravenclaw's Diadem</label><br>
+        <label><input type="radio" name="q15" value="Slytherin"> Salazar Slytherin's Locket</label>
+      </div>
+      <div class="question">
+        <p>Question 16: What is your favorite magical transportation?</p>
+        <label><input type="radio" name="q16" value="Gryffindor"> Broomstick</label><br>
+        <label><input type="radio" name="q16" value="Hufflepuff"> Thestral</label><br>
+        <label><input type="radio" name="q16" value="Ravenclaw"> Portkey</label><br>
+        <label><input type="radio" name="q16" value="Slytherin"> Floo Powder</label>
+      </div>
+      <div class="question">
+        <p>Question 17: What is your favorite magical holiday?</p>
+        <label><input type="radio" name="q17" value="Gryffindor"> Christmas at Hogwarts</label><br>
+        <label><input type="radio" name="q17" value="Hufflepuff"> Halloween Feast</label><br>
+        <label><input type="radio" name="q17" value="Ravenclaw"> Yule Ball</label><br>
+        <label><input type="radio" name="q17" value="Slytherin"> Triwizard Tournament</label>
+      </div>
+      <div class="question">
+        <p>Question 18: What is your favorite magical job?</p>
+        <label><input type="radio" name="q18" value="Gryffindor"> Auror</label><br>
+        <label><input type="radio" name="q18" value="Hufflepuff"> Healer</label><br>
+        <label><input type="radio" name="q18" value="Ravenclaw"> Professor</label><br>
+        <label><input type="radio" name="q18" value="Slytherin"> Unspeakable</label>
+      </div>
+      <div class="question">
+        <p>Question 19: What is your favorite magical event?</p>
+        <label><input type="radio" name="q19" value="Gryffindor"> Quidditch World Cup</label><br>
+        <label><input type="radio" name="q19" value="Hufflepuff"> Wizarding Fair</label><br>
+        <label><input type="radio" name="q19" value="Ravenclaw"> Magical Symposium</label><br>
+        <label><input type="radio" name="q19" value="Slytherin"> Dark Arts Gathering</label>
+      </div>
+      <div class="question">
+        <p>Question 20: What is your favorite magical quote?</p>
+        <label><input type="radio" name="q20" value="Gryffindor"> "It does not do to dwell on dreams and forget to live."</label><br>
+        <label><input type="radio" name="q20" value="Hufflepuff"> "Happiness can be found even in the darkest of times."</label><br>
+        <label><input type="radio" name="q20" value="Ravenclaw"> "Words are, in my not-so-humble opinion, our most inexhaustible source of magic."</label><br>
+        <label><input type="radio" name="q20" value="Slytherin"> "Power is only given to those who are prepared to lower themselves to pick it up."</label>
+      </div>
+      <button type="button" class="feature-btn" id="submitQuizBtn">Submit Quiz</button>
+    </form>
+    <button class="feature-btn" onclick="location.href='puckett.html'">Back to Puckett's Magical Section</button>
+    <div id="result" class="intro"></div>
+  </div>
+
+  <script src="house-sorting-quiz.js"></script> <!-- Link to the new JavaScript file -->
+</body>
+</html>

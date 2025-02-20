@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wand Generator</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #111;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+        canvas {
+            background-color: transparent;
+        }
+        #wandInfo {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🪄 Your Magic Wand 🪄</h1>
+    <canvas id="wandCanvas" width="400" height="200"></canvas>
+    <p id="wandInfo"></p>
+    <button onclick="generateWand()">Generate New Wand</button>
+    <button id="lockInBtn" style="display:none;" onclick="lockInWand()">Lock In</button>
+
+    <script>
+        function generateWand() {
+            const canvas = document.getElementById("wandCanvas");
+            const ctx = canvas.getContext("2d");
+
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Wand properties
+            const woodTypes = ["Oak", "Holly", "Willow", "Yew", "Ebony", "Maple"];
+            const coreTypes = ["Phoenix Feather", "Dragon Heartstring", "Unicorn Hair", "Basilisk Fang"];
+            const colors = ["#8B4513", "#A0522D", "#654321", "#D2691E", "#3E2723"]; // Brown shades for wand
+            const glowColors = ["#FFD700", "#FF4500", "#87CEEB", "#32CD32"]; // Gold, Red, Blue, Green
+
+            // Random selection
+            const wood = woodTypes[Math.floor(Math.random() * woodTypes.length)];
+            const core = coreTypes[Math.floor(Math.random() * coreTypes.length)];
+            const length = Math.floor(Math.random() * 7) + 9; // Between 9 - 15 inches
+            const wandColor = colors[Math.floor(Math.random() * colors.length)];
+            const glowColor = glowColors[Math.floor(Math.random() * glowColors.length)];
+
+            // Draw wand
+            ctx.lineWidth = 8;
+            ctx.strokeStyle = wandColor;
+            ctx.beginPath();
+            ctx.moveTo(100, 180); // Start point (handle)
+            ctx.lineTo(100 + length * 10, 100); // End point (wand tip)
+            ctx.stroke();
+
+            // Draw wand tip glow effect
+            ctx.beginPath();
+            ctx.arc(100 + length * 10, 100, 6, 0, Math.PI * 2);
+            ctx.fillStyle = glowColor;
+            ctx.shadowBlur = 20;
+            ctx.shadowColor = glowColor;
+            ctx.fill();
+
+            // Display wand description
+            document.getElementById("wandInfo").innerHTML = 
+                `🌳 Wood: <b>${wood}</b> | 🧵 Core: <b>${core}</b> | 📏 Length: <b>${length} inches</b>`;
+            
+            document.getElementById('lockInBtn').style.display = 'block';
+        }
+
+        function lockInWand() {
+            const wandInfo = document.getElementById('wandInfo').innerText;
+            localStorage.setItem('lockedWand', wandInfo);
+            location.href = 'puckett.html';
+        }
+
+        // Generate a wand on page load
+        generateWand();
+    </script>
+
+</body>
+</html>
